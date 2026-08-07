@@ -1,3 +1,4 @@
+<img width="848" height="279" alt="Screenshot 2026-08-07 221035" src="https://github.com/user-attachments/assets/dde477da-d82e-49c8-8a96-4d1e5f109396" />
 # Candidate Elimination Algorithm
 
 training_data = [
