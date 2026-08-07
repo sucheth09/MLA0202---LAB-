@@ -34,3 +34,7 @@ final_hypothesis = find_s(training_data)
 
 print("\nFinal Most Specific Hypothesis:")
 print(final_hypothesis)
+
+
+
+<img width="854" height="498" alt="Screenshot 2026-08-07 215241" src="https://github.com/user-attachments/assets/ece9a78d-de63-48e1-a81c-a50bb395f1ab" />
