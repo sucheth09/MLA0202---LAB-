@@ -1,3 +1,4 @@
+<img width="854" height="498" alt="Screenshot 2026-08-07 215241" src="https://github.com/user-attachments/assets/b507db6f-9bc0-4127-ac1d-5574d5d1217a" />
 # FIND-S Algorithm Implementation
 
 def find_s(training_data):
