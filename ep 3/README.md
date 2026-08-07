@@ -1,3 +1,4 @@
+<img width="846" height="576" alt="Screenshot 2026-08-07 221618" src="https://github.com/user-attachments/assets/09b26d62-5395-4b96-81a1-91578b8fc917" />
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 
