@@ -1,3 +1,4 @@
+<img width="846" height="355" alt="Screenshot 2026-08-07 222001" src="https://github.com/user-attachments/assets/ebe21518-a1a2-4d0a-8b7b-ed9f52ab4e9b" />
 from sklearn.neural_network import MLPClassifier
 
 X = [
