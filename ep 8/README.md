@@ -25,6 +25,9 @@ print(prediction[:10])
 print("\nActual Values")
 print(y_test[:10])
 
+<img width="864" height="306" alt="Screenshot 2026-08-07 222720" src="https://github.com/user-attachments/assets/e05ac7e7-5cbb-49a8-9f70-7b3d1e9b6b00" />
+
+
 print("\nIntercept")
 print(model.intercept_)
 
