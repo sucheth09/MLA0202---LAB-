@@ -1,3 +1,4 @@
+<img width="843" height="328" alt="Screenshot 2026-08-07 222425" src="https://github.com/user-attachments/assets/4a9a2e4e-60cf-4c8a-a55a-4c5c3c1a838b" />
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
