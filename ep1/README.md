@@ -19,11 +19,13 @@ def find_s(training_data):
 
     return hypothesis
 
+
 # -----------------------------
 # Training Data
 # Format:
 # [Sky, AirTemp, Humidity, Wind, Water, Forecast, EnjoySport]
 # -----------------------------
+
 training_data = [
     ['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes'],
     ['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes'],
