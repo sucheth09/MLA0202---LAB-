@@ -1,3 +1,4 @@
+<img width="832" height="368" alt="Screenshot 2026-08-07 222554" src="https://github.com/user-attachments/assets/73ebefba-32f2-42a3-b22e-afbbb6c580a6" />
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
