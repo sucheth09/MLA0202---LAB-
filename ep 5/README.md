@@ -1,3 +1,4 @@
+<img width="859" height="251" alt="Screenshot 2026-08-07 222206" src="https://github.com/user-attachments/assets/d0b260d6-249f-468d-b062-def0ab13c3c2" />
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
