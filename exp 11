@@ -1,0 +1,42 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+data = pd.DataFrame({
+    "Age":[25,35,45,30,50,28,40,32,48,38],
+    "Income":[40000,60000,30000,50000,25000,45000,35000,52000,28000,58000],
+    "Loan":[10000,15000,20000,12000,22000,11000,18000,13000,21000,14000],
+    "Score":["Good","Good","Poor","Good","Poor","Good","Poor","Good","Poor","Good"]
+})
+
+encoder = LabelEncoder()
+data["Score"] = encoder.fit_transform(data["Score"])
+
+X = data[["Age","Income","Loan"]]
+y = data["Score"]
+
+X_train,X_test,y_train,y_test = train_test_split(
+    X,y,test_size=0.2,random_state=42
+)
+
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train,y_train)
+
+pred = model.predict(X_test)
+
+print("Accuracy:",accuracy_score(y_test,pred))
+
+new_customer = pd.DataFrame({
+    "Age":[34],
+    "Income":[55000],
+    "Loan":[14000]
+})
+
+result = model.predict(new_customer)
+
+if result[0]==0:
+    print("Credit Score: Good")
+else:
+    print("Credit Score: Poor")
