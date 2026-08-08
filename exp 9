@@ -1,18 +1,43 @@
+ Compare Linear Regression and Polynomial Regression
+
 import numpy as np
-from sklearn.preprocessing import PolynomialFeatures
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.metrics import r2_score
+ Sample dataset
+X = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).reshape(-1, 1)
+y = np.array([1.5, 3.8, 6.7, 9.5, 13.2, 18.1, 24.5, 31.0, 39.2, 48.5])
 
-X = np.array([[1],[2],[3],[4]])
-y = np.array([1,4,9,16])
+ Linear Regression 
+linear_model = LinearRegression()
+linear_model.fit(X, y)
+y_linear = linear_model.predict(X)
 
-lin = LinearRegression()
-lin.fit(X, y)
-
+ Polynomial Regression 
 poly = PolynomialFeatures(degree=2)
 X_poly = poly.fit_transform(X)
 
 poly_model = LinearRegression()
 poly_model.fit(X_poly, y)
+y_poly = poly_model.predict(X_poly)
+Evaluation
+linear_r2 = r2_score(y, y_linear)
+poly_r2 = r2_score(y, y_poly)
+print("Linear Regression R² Score:", linear_r2)
+print("Polynomial Regression R² Score:", poly_r2)
+ Plot Results 
+plt.scatter(X, y, color="blue", label="Actual Data")
+ Linear Regression Line
+plt.plot(X, y_linear, color="red", label="Linear Regression")
 
-print("Linear Prediction:", lin.predict([[5]]))
-print("Polynomial Prediction:", poly_model.predict(poly.transform([[5]])))
+Polynomial Regression Curve
+X_grid = np.linspace(1, 10, 100).reshape(-1, 1)
+X_grid_poly = poly.transform(X_grid)
+plt.plot(X_grid, poly_model.predict(X_grid_poly),
+         color="green", label="Polynomial Regression")
+plt.title("Linear Regression vs Polynomial Regression")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.show()
